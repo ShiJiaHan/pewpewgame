@@ -20,4 +20,13 @@ class Player extends GameObject{
   void shoot(){
     if(mousePressed)objects.add(new Bullet());
   }
+  void show(){
+    super.show();
+    strokeWeight(3);
+    stroke(black);
+    line(x,y,mouseX,y);
+    stroke(white);
+    line(mouseX,y,mouseX,mouseY);
+    strokeWeight(1);
+  }
 }

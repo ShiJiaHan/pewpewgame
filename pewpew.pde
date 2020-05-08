@@ -27,6 +27,7 @@ boolean wkey, akey, skey, dkey, spacekey;
 void setup() {
   //graphics
   size(800, 800);
+  
   noStroke();
   
   //initialize key variables
@@ -35,6 +36,9 @@ void setup() {
   myPlayer=new Player();
   objects=new ArrayList<GameObject>();
   objects.add(myPlayer);
+  for(int i=0;i<100;i++){
+    objects.add(new Obstacle());
+  }
 }
 
 //##################################### DRAW ################################################
